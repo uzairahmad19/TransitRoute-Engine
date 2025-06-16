@@ -1,0 +1,16 @@
+station_id,station_name,line,latitude,longitude
+S1,Rajiv Chowk,Yellow|Blue,28.632808,77.219676
+S2,Kashmere Gate,Yellow|Red,28.665353,77.231073
+S3,Central Secretariat,Yellow|Violet,28.612833,77.208443
+S4,HUDA City Center,Yellow,28.459497,77.026638
+S5,Yamuna Bank,Blue,28.622857,77.279039
+S6,Vaishali,Blue,28.647303,77.336126
+S7,New Delhi,Yellow|Orange,28.642987,77.220538
+S8,Chandni Chowk,Yellow,28.650572,77.230328
+S9,Patel Chowk,Yellow,28.630476,77.217721
+S10,Qutub Minar,Yellow,28.553492,77.184698
+S11,Chhatarpur,Yellow,28.499923,77.146685
+S12,Welcome,Red,28.670729,77.292587
+S13,Shahdara,Red,28.671854,77.279846
+S14,Mandi House,Blue|Violet,28.628127,77.233918
+S15,Janpath,Violet,28.620889,77.218681
