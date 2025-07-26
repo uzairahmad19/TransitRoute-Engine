@@ -2,6 +2,7 @@ package utils;
 
 import model.MetroGraph;
 import model.Station;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -18,22 +19,21 @@ public class MetroDataLoader {
 
         // Load connections
         List<String[]> connections = CSVReader.readCSV(CONNECTIONS_CSV);
-        // In loadMetroGraph method
         for (String[] connection : connections) {
             String fromId = connection[0];
             String toId = connection[1];
             int distance = Integer.parseInt(connection[2]);
             int time = Integer.parseInt(connection[3]);
-            boolean isTransfer = connection.length > 4 && Boolean.parseBoolean(connection[4]);
+            boolean isTransfer = Boolean.parseBoolean(connection[4]);
+            int fare = Integer.parseInt(connection[5]);
 
             Station fromStation = stations.get(fromId);
             Station toStation = stations.get(toId);
 
             if (fromStation != null && toStation != null) {
-                graph.addEdge(fromStation, toStation, distance, time, isTransfer);
+                graph.addEdge(fromStation, toStation, distance, time, isTransfer, fare);
             }
         }
-
         return graph;
     }
 
@@ -51,7 +51,6 @@ public class MetroDataLoader {
             stations.put(stationId,
                     new Station(stationId, stationName, lines, latitude, longitude));
         }
-
         return stations;
     }
 
